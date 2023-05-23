@@ -1,0 +1,24 @@
+{
+  "name": "web-test",
+  "version": "1.0.0",
+  "description": "Trying to replicate a web page that was given to me",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamforgac/web-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamforgac/web-test/issues"
+  },
+  "homepage": "https://github.com/adamforgac/web-test#readme",
+  "devDependencies": {
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
