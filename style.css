@@ -155,6 +155,7 @@ table {
   overflow: hidden;
   position: relative;
   z-index: 100;
+  border: 2px solid red;
 }
 
 .liner {
@@ -298,9 +299,16 @@ table {
     height: 90%;
 }
 
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
+
 .img-section2 {
     display: grid;
-    grid-template-columns: 400px 350px 220px 390px;
+    grid-template-columns: 400px 350px 220px 390px 200px 200px;
     gap: 25px;
     padding: 30px 0 10px 22px;
 }
@@ -401,8 +409,21 @@ table {
     }
 }
 
+@keyframes slide2 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
 .slide-track {
-    animation: 100s slide infinite linear;
+    animation: 10s slide infinite linear;
+}
+
+.slide-track2 {
+    animation: 10s slide2 infinite linear;
 }
 
 
@@ -410,9 +431,9 @@ table {
 /* TEXT AREA */
 
 .text-area {
-    margin-top: 25px;
+    margin-top: 50px;
     width: 100%;
-    padding: 70px 30px 100px 40px;
+    padding: 0px 30px 100px 40px;
     display: grid;
     grid-template-rows: min-content min-content;
     gap: 70px;
@@ -460,10 +481,10 @@ table {
 /* IMAGE AREA */
 
 .image-area {
-    height: 696px;
     display: grid;
     grid-template-rows: 219px auto;
-    padding: 0px 40px 0px 40px;
+    padding: 0 40px;
+    margin-bottom: 100px;
 }
 
 .image-area > div {
@@ -473,6 +494,8 @@ table {
 .image-area-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    width: clamp(800px, 100%, 1350px);
+    justify-self: center;
 }
 
 .image-area-buttons > div {
@@ -499,10 +522,22 @@ table {
     grid-template-rows: 1fr 1fr;
     padding-left: 50px;
     gap: 25px;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
-.agriculture-button {
+.logistics-button {
     background-color: var(--web-yellow);
+}
+
+.yellow-back {
+    background-color: var(--web-yellow);
+    transition: 0.5s;
+}
+
+.white-back {
+    background-color: var(--web-white);
+    transition: 0.5s;
 }
 
 .logistics-num, .agriculture-num, .foods-num {
@@ -533,13 +568,18 @@ table {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--web-yellow);
+    width: clamp(800px, 100%, 1350px);
+    justify-self: center;
 }
 
 .image-section-text {
-    padding: 60px 0 0px 50px;
+    padding: 60px 0 60px 50px;
     display: grid;
     grid-template-rows: min-content min-content;
     gap: 45px;
+}
+
+.image-area-cards > div {
 }
 
 .image-section-text-heading h3 {
@@ -556,9 +596,62 @@ table {
     width: 476px;
 }
 
+.image-section-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logistics-img {
+    width: 450px;
+}
+
+.foods-img {
+    width: 450px;
+}
+
+.agriculture-img {
+    width: 420px;
+}
+
 /* STATS AREA */
 
+.stats-area {
+    padding: 0 40px;
+    margin-bottom: 100px;
+}
 
+.info-box {
+    height: 191px;
+    background-color: var(--web-green);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-box h3 {
+    color: var(--web-white);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.08px;
+    margin-bottom: 3px;
+}
+
+.info-box p {
+    color: var(--web-white);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: -0.45px;
+    line-height: 30px;
+}
 
 /* POSITIONS AREA */
 
