@@ -57,6 +57,11 @@ table {
 /* REUSABLE  */
 /* REUSABLE  */
 
+@font-face {
+    font-family: 'SF pro';
+    src: url(fonts/sf-pro-display-font/SF-Pro-Display-Light.woff) format('woff');
+}
+
 :root {
     --web-green: #00792C;
     --web-dark-grey: #636363;
@@ -155,7 +160,6 @@ table {
   overflow: hidden;
   position: relative;
   z-index: 100;
-  border: 2px solid red;
 }
 
 .liner {
@@ -299,13 +303,6 @@ table {
     height: 90%;
 }
 
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-/* PŘIDAT OBRÁZKY DO 2. ANIMACE!!! */
-
 .img-section2 {
     display: grid;
     grid-template-columns: 400px 350px 220px 390px 200px 200px;
@@ -332,6 +329,12 @@ table {
 .col9 {
     display: grid;
     grid-template-rows: 1.2fr 1fr;
+}
+
+.col11 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .col9 > div {
@@ -397,6 +400,26 @@ table {
     border-radius: 8px;
 }
 
+.pic15 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pic16 {
+    display: flex;
+    justify-content: center;
+}
+
+.pic16 img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.pic17 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
 
 /* ANIMATION */
 
@@ -419,11 +442,11 @@ table {
 }
 
 .slide-track {
-    animation: 10s slide infinite linear;
+    animation: 110s slide infinite linear;
 }
 
 .slide-track2 {
-    animation: 10s slide2 infinite linear;
+    animation: 90s slide2 infinite linear;
 }
 
 
@@ -655,6 +678,150 @@ table {
 
 /* POSITIONS AREA */
 
+
+.positions-area {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    padding: 0 40px;
+}
+
+.offer-types-section-heading h5 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--web-dark-grey);
+    margin-bottom: 20px;
+}
+
+.positions-area > div {
+}
+
+.positions-heading {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.positions-heading h2 {
+    font-size: 54px;
+    letter-spacing: 0.1px;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--web-dark-grey);
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.job-offers {
+    display: grid;
+    /* LARGER WIDTH DEVICES */
+    /* grid-template-columns: auto minmax(1094px, 1fr); */
+    grid-template-columns: auto 1094px;
+}
+
+.job-offers > div {
+
+}
+
+.actual-offers {
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    gap: 15px;
+}
+
+.actual-offers > div {
+
+}
+
+.offer {
+    padding: 10px 20px 10px 20px;
+    display: grid;
+    gap: 13px;
+    grid-template-rows: min-content min-content 1fr;
+    border: 1px solid var(--web-green);
+}
+
+.offer-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.offer-heading h3 {
+    font-size: 28px;
+    letter-spacing: 0.05px;
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+    color: var(--web-green);
+}
+
+.offer-heading p {
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 0.07px;
+    color: var(--web-green);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.offer-subheading h4 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--web-dark-grey);
+    margin-bottom: 7px;
+}
+
+.offer-description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.place-time {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 10px;
+}
+
+.place-time h4 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--web-dark-grey);
+}
+
+.offer-description p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.45px;
+    color: var(--web-dark-grey);
+    width: 841px;
+    line-height: 30px;
+}
+
+.position-type ul {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(7, min-content);
+}
+
+.position-type ul button {
+    border: none;
+    padding: 7.5px 24px;
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--web-green);
+    color: var(--web-white);
+    letter-spacing: -0.45px;
+    border: 1px solid var(--web-green);
+}
+
+.position-type ul button:focus {
+    background-color: var(--web-white);
+    color: var(--web-green);
+}
 
 
 /* FOOTER AREA */
