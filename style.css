@@ -28,6 +28,10 @@ body {
 	line-height: 1;
 }
 
+.active-body {
+    overflow: hidden;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -115,6 +119,7 @@ table {
     border-left: 4px solid var(--web-green);
     border-right: 4px solid var(--web-green);
     letter-spacing: 0.05px;
+    z-index: 300;
 }
 
 .logo-left {
@@ -498,6 +503,7 @@ table {
     grid-template-rows: 219px auto;
     padding: 0 40px;
     margin-bottom: 100px;
+    border: 2px solid red;
 }
 
 .image-area > div {
@@ -718,7 +724,7 @@ table {
 
 .actual-offers {
     display: grid;
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: repeat(5, min-content);
     gap: 15px;
 }
 
@@ -960,4 +966,262 @@ table {
 html.is-animating .transition-fade {
     opacity: 0;
     transition: 500ms;
+}
+
+/* NONE */
+
+.hamburger-menu-icon {
+    display: none;
+    z-index: 300;
+}
+
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.hamburger {
+    margin: 0 auto;
+    width: 40px;
+    height: 30px;
+    position: relative;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 40px;
+    height: 4px;
+    background-color: var(--web-white);
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
+
+.hamburger3 .bar1 {
+    transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+    transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1{
+    transform: rotate(45deg);
+    height: 3px;
+    width: 42px;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar3{
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2{
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar4{
+    transform: rotate(-45deg);
+    height: 3px;
+    width: 42px;
+}
+
+.hamburger-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    opacity: 0;
+    left: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 200;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    transition: 0.5s;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.hamburger-menu > div {
+}
+
+.hamburger-menu.active-hamburger {
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s;
+    overflow: scroll;
+}
+
+.hamburger-menu > div {
+}
+
+.hamburger-list {
+    display: grid;
+    grid-template-rows: repeat(6, min-content);
+    text-align: center;
+    align-content: center;
+    justify-self: center;
+    gap: 26px;
+}
+
+.list-ham, .list-button-ham {
+    color: white;
+}
+
+.hamburger-list li {
+    font-size: 18px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.45px;
+    padding: 13px 24px 13px 24px;
+}
+
+.list-ham {
+    margin-right: 10px;   
+    color: white; 
+}
+
+.list-button-ham {
+    background-color: white;
+    color: var(--web-green);
+    padding: 13px 24px 13px 24px;
+}
+
+.image-area-mobile {
+    display: none;
+}
+
+
+
+
+
+
+/* IMAGE-CARDS */
+
+
+.image-area-mobile {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    margin-bottom: 100px;
+    padding: 0 18px;
+    border: 2px solid red;
+}
+
+.image-area-mobile-closed {
+    display: unset;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    margin-bottom: 100px;
+    padding: 0 18px;
+}
+
+.logistics-mobile-closed, .agriculture-mobile-closed, .foods-mobile-closed {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.logistics-mobile, .agriculture-mobile, .foods-mobile {
+    padding: 0 17px 19px 19px;
+    display: grid;
+    gap: 0px;
+    grid-template-rows: min-content min-content;
+    border: 2px solid red;
+}
+
+.logistics-mobile {
+    background-color: var(--web-yellow);
+}
+
+.image-area-heading-mobile h3 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: var(--web-dark-grey);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.03px;
+}
+
+.logistics-mobile-open, .agriculture-mobile-open, .foods-mobile-open {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 40px;
+}
+
+.logistics-open-image, .agriculture-open-image, .foods-open-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logistics-open-image img, .agriculture-open-image img, .foods-open-image img {
+    width: 200px;
+}
+
+.logistics-open-text p, .agriculture-open-text p, .foods-open-text p {
+    font-size: 15px;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: -0.28px;
+    line-height: 26px;
+}
+
+/* IMAGE-CARDS */
+
+
+
+
+
+.num-slash {
+    margin-right: 13px;
+}
+
+.logistics-operators-mobile, .agriculture-operators-mobile, .foods-operators-mobile {
+    display: flex;
+}
+
+.agriculture-minus, .logistics-minus, .foods-minus {
+    transform: translateX(-5px);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.mobile-operators p {
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.image-area-mobile h4 {
+    font-size: 30px;
+    font-family: 'Titillium Web', sans-serif;
 }
