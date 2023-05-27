@@ -23,5 +23,8 @@
     "eslint-plugin-import": "^2.27.5",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "swup": "^3.0.7"
   }
 }

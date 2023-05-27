@@ -60,6 +60,9 @@ function extendPosition(index) {
     openedOffer.appendChild(document.createElement('div')).classList.add('opened-section2');
     openedOffer.appendChild(document.createElement('div')).classList.add('opened-section3');
 
+    offers[index].style.backgroundColor = 'var(--web-position-back)';
+    offers[index].style.border = 'none';
+
     const sectionOne = openedOffer.querySelector('.opened-section1');
     sectionOne.appendChild(document.createElement('div')).classList.add('offer-subheading');
     sectionOne.appendChild(document.createElement('div')).classList.add('opened-text-part1', 'opened-text');
@@ -116,10 +119,6 @@ function extendPosition(index) {
     buttonSectionThree.appendChild(document.createElement('button'));
     buttonSectionThree.querySelector('button').innerHTML = 'Odeslat žádost';
 
-    // ADD CLASS
-
-    openedOffer.classList.add('active-position');
-
     // MANAGING PLUS SIGN
 
     plus[index].classList.add('unclickable');
@@ -127,8 +126,14 @@ function extendPosition(index) {
 
     // MANAGING AREA
 
-    document.querySelector('.offer-opened').style.gap = '45px';
-    document.querySelector('.offer').style.gap = '45px';
+    const openOffers = document.querySelectorAll('.offer-opened');
+    const basicOffers = document.querySelectorAll('.offer');
+    openOffers[index].style.gap = '45px';
+    basicOffers[index].style.gap = '45px';
+
+    // ADD CLASS
+
+    openedOffer.classList.add('active-position');
   }
 }
 
@@ -138,9 +143,13 @@ function extendPosition2(index) {
   plus[index].classList.remove('unclickable');
   minus[index].classList.remove('clickable');
   openedOffer.classList.remove('active-position');
+  offers[index].style.backgroundColor = 'var(--web-white)';
+  offers[index].style.border = '1px solid var(--web-green)';
 
   // MANAGING AREA
 
-  document.querySelector('.offer-opened').style.gap = '0px';
-  document.querySelector('.offer').style.gap = '0px';
+  const openOffers = document.querySelectorAll('.offer-opened');
+  const basicOffers = document.querySelectorAll('.offer');
+  openOffers[index].style.gap = '0';
+  basicOffers[index].style.gap = '0';
 }
