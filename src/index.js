@@ -1,6 +1,8 @@
 import createAgriculture from './agriculture';
 import createLogistics from './logistics';
 import createFood from './foods';
+import handleAllPositions from './positions';
+import createHamMenu from './ham-menu';
 
 const logisticsButton = document.querySelector('.logistics-button');
 const agricultureButton = document.querySelector('.agriculture-button');
@@ -32,124 +34,89 @@ logisticsButton.addEventListener('click', () => {
 
 // POSITION ANIMATIONS
 
-const plus = document.querySelectorAll('.plus');
-const minus = document.querySelectorAll('.minus');
-const offers = document.querySelectorAll('.offer');
+handleAllPositions();
 
-function handleClick(index) {
-  extendPosition(index);
-}
+// HAMBURGER MENU
 
-function handleClick2(index) {
-  extendPosition2(index);
-}
+createHamMenu();
 
-for (let i = 0; i < plus.length; i++) {
-  const item = plus[i];
-  const item2 = minus[i];
-  item.addEventListener('click', handleClick.bind(null, i));
-  item2.addEventListener('click', handleClick2.bind(null, i));
-}
+// IMAGE PART FOR MOBILE
 
-function extendPosition(index) {
-  const openedOffer = offers[index].querySelector('.offer-opened');
-  if (openedOffer.classList.contains('active-position')) {
+const plusLogistics = document.querySelector('.logistics-operators-mobile .plus-mobile');
+const minusLogistics = document.querySelector('.logistics-minus');
+
+const plusAgriculture = document.querySelector('.agriculture-operators-mobile .plus-mobile');
+const minusAgriculture = document.querySelector('.agriculture-minus');
+
+const plusFoods = document.querySelector('.foods-operators-mobile .plus-mobile');
+const minusFoods = document.querySelector('.foods-minus');
+
+const logisticsMobile = document.querySelector('.logistics-mobile');
+const agricultureMobile = document.querySelector('.logistics-mobile');
+const foodsMobile = document.querySelector('.logistics-mobile');
+
+plusLogistics.addEventListener('click', () => {
+  if (logisticsMobile.classList.contains('active-mobile-logistics')) {
     false;
   } else {
-    openedOffer.appendChild(document.createElement('div')).classList.add('opened-section1');
-    openedOffer.appendChild(document.createElement('div')).classList.add('opened-section2');
-    openedOffer.appendChild(document.createElement('div')).classList.add('opened-section3');
+    logisticsMobile.classList.add('active-mobile-logistics');
+    const logisticsOpen = document.querySelector('.logistics-mobile-open');
+    logisticsOpen.appendChild(document.createElement('div')).classList.add('logistics-open-image');
+    logisticsOpen.appendChild(document.createElement('div')).classList.add('logistics-open-text');
 
-    offers[index].style.backgroundColor = 'var(--web-position-back)';
-    offers[index].style.border = 'none';
+    const logisticsOpenText = document.querySelector('.logistics-open-text');
+    const logisticsOpenImage = document.querySelector('.logistics-open-image');
 
-    const sectionOne = openedOffer.querySelector('.opened-section1');
-    sectionOne.appendChild(document.createElement('div')).classList.add('offer-subheading');
-    sectionOne.appendChild(document.createElement('div')).classList.add('opened-text-part1', 'opened-text');
-    sectionOne.appendChild(document.createElement('div')).classList.add('opened-text-part2', 'opened-text');
-    sectionOne.appendChild(document.createElement('div')).classList.add('opened-text-part3', 'opened-text');
+    const img = logisticsOpenImage.appendChild(document.createElement('img'));
+    img.src = 'images/logistics2.png';
 
-    const subHeadingSectionOne = openedOffer.querySelector('.offer-subheading');
-    const textSectionOne = openedOffer.querySelector('.opened-text-part1');
-    const textSectionTwo = openedOffer.querySelector('.opened-text-part2');
-    const textSectionThree = openedOffer.querySelector('.opened-text-part3');
+    logisticsOpenText.appendChild(document.createElement('p')).textContent = 'At magnum periculum adiit in oculis quidem faciunt, ut dolore disputandum putant sed ut alterum esse fugiendum itaque earum motus et ultimum bonorum, quod maxime consuevit iactare vestra se esse albam, dulce mel quorum facta quem ad naturam aut in liberos atque integre iudicante itaque. Omne animal, simul atque integre iudicante itaque aiunt hanc quasi naturalem atque corrupti, quos tu tam inportuno tamque crudeli; sin, ut summum malum et, quantum possit, a sapiente delectus, ut aut ad respondendum reddidisti quorum facta quem modo ista sis aequitate, quam ob rem aperiam.';
 
-    subHeadingSectionOne.appendChild(document.createElement('h4'));
-    subHeadingSectionOne.querySelector('h4').innerHTML = 'Ut placet, inquam tum dicere exorsus est consecutus? laudem et.';
-
-    textSectionOne.appendChild(document.createElement('p'));
-    textSectionOne.querySelector('p').innerHTML = 'Primum igitur, inquit, modo dixi, constituto, ut ita ruant itaque negat opus esse fugiendum itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem et fortibus viris commemorandis eorumque factis non quo voluptas in culpa, qui dolorem aspernari ut calere ignem, nivem esse fugiendum.';
-
-    textSectionTwo.appendChild(document.createElement('p'));
-    textSectionTwo.querySelector('p').innerHTML = 'Certe, inquam, pertinax non numquam eius modi tempora incidunt, ut perspiciatis, unde omnis iste natus error sit numeranda nec in malis dolor, non numquam eius modi tempora incidunt, ut et negent satis esse, quam interrogare aut officiis debitis aut contra sit, a natura incorrupte atque.In quo ignorare vos arbitrer, sed ipsius honestatis decore laudandis, id ne ferae quidem se repellere, idque facere possimus, omnis voluptas sit, a natura ipsa iudicari ea commodi consequatur? quis autem quibusdam et quasi architecto beatae vitae sine causa, mox videro; interea hoc epicurus in. Esse fugiendum itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem et fortibus viris commemorandis eorumque factis non quo voluptas in culpa, qui dolorem aspernari ut calere ignem, nivem esse fugiendum.';
-
-    textSectionThree.appendChild(document.createElement('p'));
-    textSectionThree.querySelector('p').innerHTML = 'Certe, inquam, pertinax non numquam eius modi tempora incidunt, ut perspiciatis, unde omnis iste natus error sit numeranda nec in malis dolor, non numquam eius modi tempora incidunt, ut et negent satis esse, quam interrogare aut officiis debitis aut contra sit, a natura incorrupte atque. In quo ignorare vos arbitrer, sed ipsius honestatis decore laudandis, id ne ferae quidem se repellere, idque facere possimus, omnis voluptas sit, a natura ipsa iudicari ea commodi consequatur?';
-
-    // SECTION2
-
-    const sectionTwo = openedOffer.querySelector('.opened-section2');
-    sectionTwo.appendChild(document.createElement('div')).classList.add('offer-subheading');
-    sectionTwo.appendChild(document.createElement('div')).classList.add('opened-list');
-
-    const subHeadingSectionTwo = sectionTwo.querySelector('.offer-subheading');
-    const listSectionTwo = openedOffer.querySelector('.opened-list');
-
-    subHeadingSectionTwo.appendChild(document.createElement('h4'));
-    subHeadingSectionTwo.querySelector('h4').innerHTML = 'Ut placet, inquam tum dicere exorsus est consecutus? laudem et.';
-
-    listSectionTwo.appendChild(document.createElement('ol'));
-    const textSectionTwoList = listSectionTwo.querySelector('ol');
-    textSectionTwoList.appendChild(document.createElement('li')).classList.add('opened-list1');
-    textSectionTwoList.appendChild(document.createElement('li')).classList.add('opened-list2');
-    textSectionTwoList.appendChild(document.createElement('li')).classList.add('opened-list3');
-
-    listSectionTwo.querySelector('.opened-list1').innerHTML = 'Torquatos nostros? quos dolores et quasi naturalem atque natum sit, amet, consectetur, adipisci velit, sed quia dolor repellendus temporibus autem quibusdam et dolorem? sunt autem nusquam hoc tenebo, si ob rem aperiam eaque gaudere ut aut quid iudicat, quo voluptas sit, a philosophis compluribus permulta.';
-
-    listSectionTwo.querySelector('.opened-list2').innerHTML = 'Torquatos nostros? quos dolores et quasi naturalem atque natum sit, amet, consectetur, adipisci velit, sed quia dolor repellendus temporibus autem quibusdam et dolorem? sunt autem nusquam hoc tenebo, si ob rem aperiam eaque gaudere ut aut quid iudicat, quo voluptas sit, a philosophis compluribus permulta.';
-
-    listSectionTwo.querySelector('.opened-list3').innerHTML = 'Torquatos nostros? quos dolores et quasi naturalem atque natum sit, amet, consectetur, adipisci velit, sed quia dolor repellendus temporibus autem quibusdam et dolorem? sunt autem nusquam hoc tenebo, si ob rem aperiam eaque gaudere ut aut quid iudicat, quo voluptas sit, a philosophis compluribus permulta.';
-
-    // SECTION3
-
-    const sectionThree = openedOffer.querySelector('.opened-section3');
-    sectionThree.appendChild(document.createElement('div')).classList.add('opened-button');
-
-    const buttonSectionThree = sectionThree.querySelector('.opened-button');
-    buttonSectionThree.appendChild(document.createElement('button'));
-    buttonSectionThree.querySelector('button').innerHTML = 'Odeslat žádost';
-
-    // MANAGING PLUS SIGN
-
-    plus[index].classList.add('unclickable');
-    minus[index].classList.add('clickable');
-
-    // MANAGING AREA
-
-    const openOffers = document.querySelectorAll('.offer-opened');
-    const basicOffers = document.querySelectorAll('.offer');
-    openOffers[index].style.gap = '45px';
-    basicOffers[index].style.gap = '45px';
-
-    // ADD CLASS
-
-    openedOffer.classList.add('active-position');
+    plusLogistics.classList.add('unclickable');
+    minusLogistics.classList.add('clickable');
   }
-}
+});
 
-function extendPosition2(index) {
-  const openedOffer = offers[index].querySelector('.offer-opened');
-  openedOffer.innerHTML = '';
-  plus[index].classList.remove('unclickable');
-  minus[index].classList.remove('clickable');
-  openedOffer.classList.remove('active-position');
-  offers[index].style.backgroundColor = 'var(--web-white)';
-  offers[index].style.border = '1px solid var(--web-green)';
+plusAgriculture.addEventListener('click', () => {
+  if (agricultureMobile.classList.contains('active-mobile-agriculture')) {
+    false;
+  } else {
+    agricultureMobile.classList.add('active-mobile-agriculture');
+    const agricultureOpen = document.querySelector('.agriculture-mobile-open');
+    agricultureOpen.appendChild(document.createElement('div')).classList.add('agriculture-open-image');
+    agricultureOpen.appendChild(document.createElement('div')).classList.add('agriculture-open-text');
 
-  // MANAGING AREA
+    const agricultureOpenText = document.querySelector('.agriculture-open-text');
+    const agricultureOpenImage = document.querySelector('.agriculture-open-image');
 
-  const openOffers = document.querySelectorAll('.offer-opened');
-  const basicOffers = document.querySelectorAll('.offer');
-  openOffers[index].style.gap = '0';
-  basicOffers[index].style.gap = '0';
-}
+    const img = agricultureOpenImage.appendChild(document.createElement('img'));
+    img.src = 'images/agricutlure3.png';
+
+    agricultureOpenText.appendChild(document.createElement('p')).textContent = 'At magnum periculum adiit in oculis quidem faciunt, ut dolore disputandum putant sed ut alterum esse fugiendum itaque earum motus et ultimum bonorum, quod maxime consuevit iactare vestra se esse albam, dulce mel quorum facta quem ad naturam aut in liberos atque integre iudicante itaque. Omne animal, simul atque integre iudicante itaque aiunt hanc quasi naturalem atque corrupti, quos tu tam inportuno tamque crudeli; sin, ut summum malum et, quantum possit, a sapiente delectus, ut aut ad respondendum reddidisti quorum facta quem modo ista sis aequitate, quam ob rem aperiam.';
+
+    plusAgriculture.classList.add('unclickable');
+    minusAgriculture.classList.add('clickable');
+  }
+});
+
+plusFoods.addEventListener('click', () => {
+  if (foodsMobile.classList.contains('active-mobile-foods')) {
+    false;
+  } else {
+    agricultureMobile.classList.add('active-mobile-foods');
+    const foodsOpen = document.querySelector('.foods-mobile-open');
+    foodsOpen.appendChild(document.createElement('div')).classList.add('foods-open-image');
+    foodsOpen.appendChild(document.createElement('div')).classList.add('foods-open-text');
+
+    const foodsOpenText = document.querySelector('.foods-open-text');
+    const foodsOpenImage = document.querySelector('.foods-open-image');
+
+    const img = foodsOpenImage.appendChild(document.createElement('img'));
+    img.src = 'images/foods3.png';
+
+    foodsOpenText.appendChild(document.createElement('p')).textContent = 'At magnum periculum adiit in oculis quidem faciunt, ut dolore disputandum putant sed ut alterum esse fugiendum itaque earum motus et ultimum bonorum, quod maxime consuevit iactare vestra se esse albam, dulce mel quorum facta quem ad naturam aut in liberos atque integre iudicante itaque. Omne animal, simul atque integre iudicante itaque aiunt hanc quasi naturalem atque corrupti, quos tu tam inportuno tamque crudeli; sin, ut summum malum et, quantum possit, a sapiente delectus, ut aut ad respondendum reddidisti quorum facta quem modo ista sis aequitate, quam ob rem aperiam.';
+
+    plusFoods.classList.add('unclickable');
+    minusFoods.classList.add('clickable');
+  }
+});

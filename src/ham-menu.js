@@ -1,0 +1,12 @@
+function createHamMenu() {
+  const hamIcon = document.querySelector('.hamburger');
+  const hamMenu = document.querySelector('.hamburger-menu');
+  const body = document.querySelector('body');
+
+  hamIcon.addEventListener('click', () => {
+    hamMenu.classList.toggle('active-hamburger');
+    body.classList.toggle('active-body');
+  });
+}
+
+export default createHamMenu;

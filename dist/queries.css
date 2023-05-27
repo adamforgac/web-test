@@ -93,6 +93,155 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    /* MENU MENU MENU MENU */
+    .logo h1 {
+        font-size: 16px;
+        padding: 5px 9px;
+    }
+
+    .header-menu {
+        padding: 20px 22px 20px 8px;
+    }
+
+    .options-list ul li {
+        font-size: 15.5px;
+        padding: 10px 15px 10px 15px;
+    }
+
+    .text-area-heading h2 {
+        font-size: 44px;
+        line-height: 70px;
+        letter-spacing: 0.1px;
+    }
+
+    .text-area-text p {
+        font-size: 16.5px;
+        line-height: 27px;
+        width: clamp(300px, 100%, 730px);
+        letter-spacing: -0.45px;
+    }
+
+    .button-heading h3 {
+        font-size: 20px;
+        line-height: 38px;
+    }
+
+    .image-section-text-heading h3 {
+        font-size: 32px;
+    }
+
+    .logistics-img {
+        width: 250px;
+    }
+
+    .foods-img {
+        width: 250px;
+    }
+
+    .agriculture-img {
+        width: 250px;
+    }
+
+    .image-section-text-paragraph p {
+        font-size: 15px;
+        width: clamp(200px, 100%, 476px);
+        line-height: 23px;
+    }
+
+    .image-area-cards {
+        grid-template-columns: 1fr 0.7fr;
+    }
+
+    .info-box h3 {
+        font-size: 25px;
+    }
+
+    .info-box p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .image-section-text {
+        padding: 60px 0px 60px 40px;
+    }
+
+    .image-section-image {
+       padding-right: 15px;
+    }
+
+    .offer-heading h3 {
+        font-size: 23px;
+    }
+
+    .offer-subheading h4 {
+        font-size: 17px;
+    }
+
+    .offer-description p {
+        font-size: 15px;
+        line-height: 23px;
+    }
+
+    .place-time h4 {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .position-type ul button {
+        padding: 6.5px 20px;
+        font-size: 16px;
+    }
+
+    .text-area-heading h2 {
+        font-size: 44px;
+        line-height: 70px;
+        letter-spacing: 0.1px;
+    }
+
+    .positions-heading h2 {
+        font-size: 44px;
+    }
+
+    .logo-footer h1 {
+        font-size: 24px;
+    }
+
+    .footer-text {
+        font-size: 13.5px;
+        line-height: 22px;
+    }
+
+    .linkedin i {
+        font-size: 32px;
+    }
+}
+
+
+/* BREAKPOINT */
+/* BREAKPOINT */
+/* BREAKPOINT */
+
+@media only screen and (max-width: 900px) {
+    .hamburger-menu-icon {
+        display: unset;
+    }
+
+    .options-list {
+        display: none;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+        padding: 5px 9px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .image-area-buttons {
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .image-area {
+        display: none;
+    }
 }
 
