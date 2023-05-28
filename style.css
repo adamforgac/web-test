@@ -477,10 +477,10 @@ table {
 
 @keyframes slide2 {
     from{
-        transform: translateX(0);
+        transform: translateX(-100%);
     }
     to{
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
 }
 
@@ -489,7 +489,7 @@ table {
 }
 
 .slide-track2 {
-    animation: 90s slide2 infinite linear;
+    animation: 90s slide infinite linear;
 }
 
 
@@ -1285,5 +1285,15 @@ html.is-animating .transition-fade {
 }
 
 .image-area-mobile {
+    display: none;
+}
+
+
+/* ANIMATING PHOTOS FOR MOBILE */
+/* ANIMATING PHOTOS FOR MOBILE */
+/* ANIMATING PHOTOS FOR MOBILE */
+
+
+.photos-wrapper-mobile1, .photos-wrapper-mobile2, .photos-wrapper-mobile3, .photos-wrapper-mobile4 {
     display: none;
 }
