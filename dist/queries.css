@@ -19,6 +19,18 @@
     .offer-description p {
         width: clamp(500px, 100%, 841px);
     }
+
+    .opened-text p {
+        width: clamp(500px, 100%, 841px);
+    }
+
+    .opened-section1, .opened-section2 {
+        width: clamp(300px, 100%, 841px);
+    }
+
+    .opened-list {
+        width: clamp(300px, 100%, 841px);
+    }
 }
 
 @media only screen and (max-width: 1180px) {
@@ -120,6 +132,27 @@
         letter-spacing: -0.45px;
     }
 
+    .offer-description p {
+        font-size: 15px;
+        line-height: 23px;
+        width: clamp(300px, 100%, 730px);
+        letter-spacing: -0.45px;
+    }
+
+    .opened-text p {
+        font-size: 15px;
+        line-height: 23px;
+        width: clamp(300px, 100%, 730px);
+        letter-spacing: -0.45px;
+    }
+
+    .opened-list ol li {
+        font-size: 15px;
+        line-height: 23px;
+        width: clamp(300px, 100%, 730px);
+        letter-spacing: -0.45px;
+    }
+
     .button-heading h3 {
         font-size: 20px;
         line-height: 38px;
@@ -174,11 +207,6 @@
 
     .offer-subheading h4 {
         font-size: 17px;
-    }
-
-    .offer-description p {
-        font-size: 15px;
-        line-height: 23px;
     }
 
     .place-time h4 {
@@ -242,6 +270,110 @@
 
     .image-area {
         display: none;
+    }
+
+    .image-area-mobile {
+        display: grid;
+    }
+
+    .stats-area {
+        padding: 0 20px;
+        overflow: auto;
+    }
+
+    .info-box {
+        display: grid;
+        grid-template-columns: repeat(5, 170px);
+        width: min-content;
+        background-color: transparent;
+        gap: 30px;
+        overflow: auto;
+        height: min-content;
+    }
+
+    .employees {
+    }
+
+    .box {
+        background-color: var(--web-green);
+        height: 170px;
+    }
+
+    .job-offers {
+        display: grid;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .position-type ul {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(7, min-content);
+        padding: 0 20px;
+    }
+
+    .positions-area {
+        padding: 0;
+    }
+
+    .actual-offers {
+        padding: 0 20px;
+    }
+
+    .position-type ul button {
+        width: max-content;
+        padding: 14px 36px;
+        font-size: 23px;
+    }
+
+    .offer-types-section-heading {
+        display: none;
+    }
+
+    .position-type {
+        overflow: auto;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .text-area-text {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .logistics-mobile-open, .agriculture-mobile-open, .foods-mobile-open {
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        gap: 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .logistics-mobile, .agriculture-mobile, .foods-mobile {
+        padding: 0 20px 0 20px;
+        display: grid;
+        gap: 0px;
+        grid-template-rows: min-content min-content;
+    }
+
+    .footer-area {
+        height: 258px;
+        padding: 59px 20px 0 20px;
+    }
+    
+    .footer-section-two {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .purpose {
+        text-align: left;
+        margin-top: 10px;
     }
 }
 
