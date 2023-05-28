@@ -158,7 +158,7 @@ table {
 .moving-images {
     background-color: black;
     display: grid;
-    grid-template-rows: 2.5fr 1.25fr 2.5fr;
+    grid-template-rows: repeat(3, min-content);
 }
 
 .slider {
@@ -172,16 +172,43 @@ table {
 }
 
 .col1, .col2, .col3, .col4, .col5, .col6 {
-    height: 90%;
+    height:240px;
 }
 
-.col1, .col5 {
+.col1 {
+    margin-top: 7px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.col4, .images-heading {
+.col2 {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+
+.col3 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.col4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.images-heading {
+    padding: 50px 0 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,6 +237,7 @@ table {
 
 .pic1 img {
     width: 140px;
+    height: 92px;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -222,39 +250,31 @@ table {
 .pic2 img {
     width: 100%;
     border-radius: 8px;
-    transform: translateY(-7%);
+    height: 115px;
 }
 
 .pic3 img {
     width: 100%;
     border-radius: 8px;
-    transform: translateY(15%);
-}
-
-.pic3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    height: 209px;
 }
 
 .pic4 {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    height: 100%;
 }
 
 .pic4 img {
     width: 100%;
     border-radius: 8px;
+    height: 140px;
 }
 
 .pic5 {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 100%;
 }
 
 .pic5 img {
@@ -262,6 +282,7 @@ table {
     border-radius: 8px;
     margin-top: 17px;
     margin-bottom: 20px;
+    height: 133px;
 }
 
 .pic6 {
@@ -274,32 +295,35 @@ table {
     width: 40%;
     margin-right: 15px;
     border-radius: 8px;
+    margin-bottom: 20px;
+    height: 66px;
 }
 
 .pic7 img {
     width: 100%;
     border-radius: 8px;
-    transform: translateY(-10%);
+    height: 132px;
 }
 
 .pic8 img {
     width: 100%;
     border-radius: 8px;
     transform: translateY(10%);
+    height: 222px;
 }
 
 /* IMAGE SECTION 2 */
 
 
 .col7, .col8, .col9, .col10, .col11 {
-    height: 90%;
+    height: 240px;
 }
 
 .img-section2 {
     display: grid;
     grid-template-columns: 400px 350px 220px 390px 200px 200px;
     gap: 25px;
-    padding: 30px 0 10px 22px;
+    padding: 0 0 10px 22px;
 }
 
 .col7 {
@@ -329,6 +353,11 @@ table {
     flex-direction: column;
 }
 
+.col12 {
+    display: flex;
+    align-items: flex-end;
+}
+
 .col9 > div {
 }
 
@@ -339,25 +368,34 @@ table {
 
 .pic9-1 {
     width: 120px;
-    transform: translate(-10%, -30%);
     border-radius: 8px;
+    height: 91px;
 }
 
 .pic9-2 {
-    width: 130px;
-    transform: translate(-20%, -10%);
+    width: 100px;
+    height: 81px;
     border-radius: 8px;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+
+.pic10 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .pic10 img {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
+    height: 136px;
 }
 
 .pic11 img {
     width: 100%;
     border-radius: 8px;
-    transform: translateY(-5%);
+    height: 220px;
 }
 
 .pic12 {
@@ -369,6 +407,7 @@ table {
 .pic12 img {
     width: 100%;
     border-radius: 8px;
+    height: 117px;
 }
 
 .pic13 {
@@ -380,23 +419,31 @@ table {
 .pic13 img {
     width: 80%;
     border-radius: 8px;
+    height: 75px;
 }
 
 .pic14 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+}
+
+.col10 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .pic14 img {
     width: 100%;
     border-radius: 8px;
-    transform: translateY(-10%);
+    height: 216px;
 }
 
 .pic15 img {
     width: 100%;
     border-radius: 8px;
+    height: 109px;
 }
 
 .pic16 {
@@ -407,12 +454,13 @@ table {
 .pic16 img {
     width: 80%;
     border-radius: 8px;
+    height: 94px;
 }
 
 .pic17 img {
     width: 100%;
+    height: 218px;
     border-radius: 8px;
-    transform: translateY(-8%);
 }
 
 
@@ -503,7 +551,6 @@ table {
     grid-template-rows: 219px auto;
     padding: 0 40px;
     margin-bottom: 100px;
-    border: 2px solid red;
 }
 
 .image-area > div {
@@ -1117,24 +1164,16 @@ html.is-animating .transition-fade {
     padding: 13px 24px 13px 24px;
 }
 
-.image-area-mobile {
-    display: none;
-}
-
-
-
-
-
 
 /* IMAGE-CARDS */
 
 
 .image-area-mobile {
-    display: grid;
+    display: none;
     grid-template-rows: repeat(3, min-content);
     margin-bottom: 100px;
-    padding: 0 18px;
-    border: 2px solid red;
+    padding: 0 40px;
+    gap: 2px;
 }
 
 .image-area-mobile-closed {
@@ -1153,14 +1192,13 @@ html.is-animating .transition-fade {
 }
 
 .logistics-mobile, .agriculture-mobile, .foods-mobile {
-    padding: 0 17px 19px 19px;
+    padding: 0 17px 0 19px;
     display: grid;
     gap: 0px;
     grid-template-rows: min-content min-content;
-    border: 2px solid red;
 }
 
-.logistics-mobile {
+.active-color-mobile {
     background-color: var(--web-yellow);
 }
 
@@ -1194,6 +1232,7 @@ html.is-animating .transition-fade {
     font-family: 'Titillium Web', sans-serif;
     letter-spacing: -0.28px;
     line-height: 26px;
+    padding-bottom: 19px;
 }
 
 /* IMAGE-CARDS */
@@ -1211,17 +1250,40 @@ html.is-animating .transition-fade {
 }
 
 .agriculture-minus, .logistics-minus, .foods-minus {
-    transform: translateX(-5px);
+    transform: translate(-15.5px, -1px);
     pointer-events: none;
     opacity: 0;
+}
+
+.clickable-mobile {
+    pointer-events: all;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.unclickable-mobile {
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .mobile-operators p {
     font-size: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .image-area-mobile h4 {
     font-size: 30px;
     font-family: 'Titillium Web', sans-serif;
+    color: var(--web-dark-grey);
+}
+
+.black-color {
+    color: black;
+}
+
+.image-area-mobile {
+    display: none;
 }
