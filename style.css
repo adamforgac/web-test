@@ -93,10 +93,6 @@ table {
     background-position: center;
 }
 
-.header-area > div {
-   
-}
-
 .header-menu {
     padding: 35px 37px 35px 23px;
     display: flex;
@@ -148,7 +144,6 @@ table {
     transition: 0.3s;
 }
 
-
 .list {
     margin-right: 10px;   
     color: white; 
@@ -159,7 +154,11 @@ table {
     color: var(--web-green);
 }
 
-/* MOVING-IMAGES */
+
+/* ANIMATING IMAGES SECTION */
+/* ANIMATING IMAGES SECTION */
+/* ANIMATING IMAGES SECTION */
+
 
 .moving-images {
     display: grid;
@@ -180,7 +179,7 @@ table {
 }
 
 .col1, .col2, .col3, .col4, .col5, .col6 {
-    height:240px;
+    height: 240px;
 }
 
 .col1 {
@@ -319,9 +318,6 @@ table {
     transform: translateY(10%);
     height: 222px;
 }
-
-/* IMAGE SECTION 2 */
-
 
 .col7, .col8, .col9, .col10, .col11 {
     height: 240px;
@@ -471,9 +467,6 @@ table {
     border-radius: 8px;
 }
 
-
-/* ANIMATION */
-
 @keyframes slide {
     from{
         transform: translateX(0);
@@ -501,8 +494,10 @@ table {
 }
 
 
-
 /* TEXT AREA */
+/* TEXT AREA */
+/* TEXT AREA */
+
 
 .text-area {
     margin-top: 50px;
@@ -552,7 +547,11 @@ table {
     justify-content: flex-start;
 }
 
-/* IMAGE AREA */
+
+/* CARD IMAGE AREA */
+/* CARD IMAGE AREA */
+/* CARD IMAGE AREA */
+
 
 .image-area {
     display: grid;
@@ -561,20 +560,12 @@ table {
     margin-bottom: 100px;
 }
 
-.image-area > div {
-    
-}
-
 .image-area-buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: clamp(600px, 100%, 1350px);
     justify-self: center;
     margin-bottom: 1px;
-}
-
-.image-area-buttons > div {
-   
 }
 
 .button-heading {
@@ -711,7 +702,11 @@ table {
     width: 450px;
 }
 
+
 /* STATS AREA */
+/* STATS AREA */
+/* STATS AREA */
+
 
 .stats-area {
     padding: 0 40px;
@@ -750,6 +745,9 @@ table {
     line-height: 30px;
 }
 
+
+/* POSITIONS AREA */
+/* POSITIONS AREA */
 /* POSITIONS AREA */
 
 
@@ -767,9 +765,6 @@ table {
     font-family: 'Titillium Web', sans-serif;
     color: var(--web-dark-grey);
     margin-bottom: 20px;
-}
-
-.positions-area > div {
 }
 
 .positions-heading {
@@ -793,18 +788,10 @@ table {
     gap: 30px;
 }
 
-.job-offers > div {
-
-}
-
 .actual-offers {
     display: grid;
     grid-template-rows: repeat(5, min-content);
     gap: 15px;
-}
-
-.actual-offers > div {
-
 }
 
 .offer {
@@ -933,15 +920,11 @@ table {
     padding-left: 10px;
 }
 
-.opened-list {
-   
-}
 
 /* ACTIVE OFFER */
+/* ACTIVE OFFER */
+/* ACTIVE OFFER */
 
-.offer6 {
-   
-}
 
 .opened-section1, .opened-section2 {
     width: 1051px;
@@ -985,7 +968,11 @@ table {
     border: none;   
 }
 
+
 /* FOOTER AREA */
+/* FOOTER AREA */
+/* FOOTER AREA */
+
 
 .footer-area {
     height: 254px;
@@ -1030,7 +1017,11 @@ table {
     text-align: right;
 }
 
+
 /* TRANSITIONS */
+/* TRANSITIONS */
+/* TRANSITIONS */
+
 
 .transition-fade {
     opacity: 1;
@@ -1042,7 +1033,11 @@ html.is-animating .transition-fade {
     transition: 500ms;
 }
 
-/* NONE */
+
+/* FOR SMALLER DEVICES */
+/* FOR SMALLER DEVICES */
+/* FOR SMALLER DEVICES */
+
 
 .hamburger-menu-icon {
     display: none;
@@ -1142,9 +1137,6 @@ html.is-animating .transition-fade {
     padding-bottom: 100px;
 }
 
-.hamburger-menu > div {
-}
-
 .active-hamburger {
     position: fixed;
     min-height: 100vh;
@@ -1155,9 +1147,6 @@ html.is-animating .transition-fade {
     pointer-events: all;
     transition: 0.5s;
     overflow: scroll;
-}
-
-.hamburger-menu > div {
 }
 
 .hamburger-list {
@@ -1206,7 +1195,9 @@ html.is-animating .transition-fade {
 }
 
 
-/* IMAGE-CARDS */
+/* IMAGE-CARDS-MOBILE */
+/* IMAGE-CARDS-MOBILE */
+/* IMAGE-CARDS-MOBILE */
 
 
 .image-area-mobile {
@@ -1277,12 +1268,6 @@ html.is-animating .transition-fade {
     padding-bottom: 19px;
 }
 
-/* IMAGE-CARDS */
-
-
-
-
-
 .num-slash {
     margin-right: 13px;
 }
@@ -1335,12 +1320,6 @@ html.is-animating .transition-fade {
 .image-area-mobile {
     display: none;
 }
-
-
-/* ANIMATING PHOTOS FOR MOBILE */
-/* ANIMATING PHOTOS FOR MOBILE */
-/* ANIMATING PHOTOS FOR MOBILE */
-
 
 .photos-wrapper-mobile1, .photos-wrapper-mobile2, .photos-wrapper-mobile3, .photos-wrapper-mobile4 {
     display: none;
