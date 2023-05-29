@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-expressions */
 function createLogistics() {
   const imageCards = document.querySelector('.image-section-image');
   const imagePar = document.querySelector('.image-section-text-paragraph p');
@@ -6,6 +8,9 @@ function createLogistics() {
   const img = imageCards.appendChild(document.createElement('img'));
   img.classList.add('logistics-img');
   img.src = 'images/logistics2.png';
+
+  imagePar.style.color = 'var(--web-white)';
+  imageHeading.style.color = 'var(--web-white)';
 
   imageHeading.textContent = 'Logistics';
 

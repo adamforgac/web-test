@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-shadow */
 function createAgriculture() {
   const imageCards = document.querySelector('.image-section-image');
   const imagePar = document.querySelector('.image-section-text-paragraph p');
@@ -6,6 +8,9 @@ function createAgriculture() {
   const img = imageCards.appendChild(document.createElement('img'));
   img.classList.add('agriculture-img');
   img.src = 'images/agricutlure3.png';
+
+  imagePar.style.color = 'var(--web-black)';
+  imageHeading.style.color = 'var(--web-black)';
 
   imageHeading.textContent = 'Agriculture';
 

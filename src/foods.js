@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-expressions */
 function createFood() {
   const imageCards = document.querySelector('.image-section-image');
   const imagePar = document.querySelector('.image-section-text-paragraph p');
@@ -6,6 +8,9 @@ function createFood() {
   const img = imageCards.appendChild(document.createElement('img'));
   img.classList.add('foods-img');
   img.src = 'images/foods3.png';
+
+  imagePar.style.color = 'var(--web-white)';
+  imageHeading.style.color = 'var(--web-white)';
 
   imageHeading.textContent = 'Foods';
 
