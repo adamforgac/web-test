@@ -1,3 +1,5 @@
+// MANAGES ALL HAMBURGER MENU ACTIONS
+
 function createHamMenu() {
   const hamIcon = document.querySelector('.hamburger-menu-icon input');
   const hamMenu = document.querySelector('.hamburger-menu');

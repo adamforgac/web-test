@@ -1,5 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable no-unused-expressions */
+
+// MANAGES DESKTOP IMAGE SECTION FOR FOODS
+
 function createFood() {
   const imageCards = document.querySelector('.image-section-image');
   const imagePar = document.querySelector('.image-section-text-paragraph p');

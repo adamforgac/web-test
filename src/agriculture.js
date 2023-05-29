@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-shadow */
+
+// MANAGES DESKTOP IMAGE SECTION FOR AGRICULTURE
+
 function createAgriculture() {
   const imageCards = document.querySelector('.image-section-image');
   const imagePar = document.querySelector('.image-section-text-paragraph p');

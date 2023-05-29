@@ -266,11 +266,6 @@
     }
 }
 
-
-/* BREAKPOINT */
-/* BREAKPOINT */
-/* BREAKPOINT */
-
 @media only screen and (max-width: 900px) {
     .hamburger-menu-icon {
         display: unset;
@@ -390,10 +385,6 @@
         padding: 30px 0;
     }
 
-    /* ANIMATING PHOTOS FOR MOBILE */
-    /* ANIMATING PHOTOS FOR MOBILE */
-    /* ANIMATING PHOTOS FOR MOBILE */
-
     .liner img {
         border-radius: 8px;
     }
@@ -425,7 +416,6 @@
 
     .slide-track1-mobile {
         display: grid;
-        /* TŘETÍ SE MŮŽE ZMENŠIT */
         grid-template-columns: 117px 100px 190px 230px;
         gap: 20px;
         animation: 110s slide infinite linear;
@@ -458,22 +448,8 @@
         grid-template-rows: min-content min-content;
     }
 
-    /* COLS */
-    /* COLS */
-    /* COLS */
-
-    .col-mob1 {
-        /* display: flex;
-        justify-content: center;
-        align-items: flex-end; */
-    }
-
     .col-mob1 img {
         width: 100%;
-    }
-
-    .col-mob2 {
-        
     }
 
     .col-mob2 img {
@@ -501,12 +477,6 @@
         width: 87%;
         transform: translateX(-7px);
     }
-
-
-    /* COLS2 */
-    /* COLS2 */
-    /* COLS2 */
-
 
     .col-mob5 {
         display: flex;
@@ -554,10 +524,6 @@
         height: 92px;
     }
 
-    /* COLS3 */
-    /* COLS3 */
-    /* COLS3 */
-
     .col-mob9 {
         display: flex;
         justify-content: center;
@@ -601,12 +567,6 @@
         width: 87%;
         transform: translateX(-7px);
     }
-
-
-    /* COLS4 */
-    /* COLS4 */
-    /* COLS4 */
-
 
     .col-mob13 {
         display: flex;
@@ -653,8 +613,6 @@
         height: 62px;
     }
 
-    /* ANIMATION END */
-
     .logo h1 {
         font-size: 20px;
         margin-top: 7px;
@@ -668,7 +626,6 @@
         scale: 0.6;
         margin-top: 10px;
     }
-
 }
 
 @media only screen and (max-width: 650px) {
@@ -966,4 +923,3 @@
         padding-right: 20px;
     }
 }
-

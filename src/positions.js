@@ -1,3 +1,9 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-use-before-define */
+
+// MANAGES ALL ACTIONS FROM THE JOB OFFERS SECTION
+
 function handleAllPositions() {
   const plus = document.querySelectorAll('.plus');
   const minus = document.querySelectorAll('.minus');
@@ -29,6 +35,8 @@ function handleAllPositions() {
 
       offers[index].style.backgroundColor = 'var(--web-position-back)';
       offers[index].style.border = 'none';
+
+      // SECTION1
 
       const sectionOne = openedOffer.querySelector('.opened-section1');
       sectionOne.appendChild(document.createElement('div')).classList.add('offer-subheading');
@@ -112,8 +120,6 @@ function handleAllPositions() {
     openedOffer.classList.remove('active-position');
     offers[index].style.backgroundColor = 'var(--web-white)';
     offers[index].style.border = '1px solid var(--web-green)';
-
-    // MANAGING AREA
 
     const openOffers = document.querySelectorAll('.offer-opened');
     const basicOffers = document.querySelectorAll('.offer');

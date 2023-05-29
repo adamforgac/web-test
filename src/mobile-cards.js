@@ -1,4 +1,7 @@
 /* eslint-disable no-unused-expressions */
+
+// MANAGES ALL ACTIONS OF IMAGE CARDS ON MOBILE DEVICES
+
 function createMobileCards() {
   const plusFoods = document.querySelector('.foods-plus');
   const minusFoods = document.querySelector('.foods-minus');
