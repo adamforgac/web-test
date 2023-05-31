@@ -990,7 +990,7 @@ table {
     justify-content: space-between;
 }
 
-.logo-footer h1 {
+.logo-footer h2 {
     color: var(--web-white);
     font-size: 26px;
     font-family: 'Titillium Web', sans-serif;
